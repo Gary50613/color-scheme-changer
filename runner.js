@@ -3,7 +3,7 @@
 
 	chrome.storage.sync.get([key], (items) => {
 		if(!items[key])
-			return document.querySelector('meta[name="color-scheme"][content="light only"]').remove()
+			return document.querySelector('meta[name="color-scheme"][content="light only"]')?.remove()
 		
 		const meta = document.createElement("meta")
 		
