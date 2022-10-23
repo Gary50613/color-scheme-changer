@@ -1,0 +1,25 @@
+{
+	"name": "Color Scheme Changer",
+	"version": "0.0.1",
+	"description": "A cool extension",
+	"permissions": ["storage", "tabs", "activeTab", "scripting"],
+	"host_permissions": ["<all_urls>"],
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
+		"default_title": "Color Scheme Changer"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [
+				"runner.js"
+			],
+			"run_at": "document_start"
+		}
+	]
+}
